@@ -21,9 +21,8 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.hide()
 
         /* Inisialisasi Variabel */
-        val nama = binding.etNama
-        val pesanan = binding.etPesanan
-        var totalPesanan = binding.tvTotal
+        var nama = binding.etNama
+        var pesanan = binding.etPesanan
         var btnPesan = binding.btnPesan
 
         /* Harga KopiMantan */
@@ -37,6 +36,7 @@ class MainActivity : AppCompatActivity() {
     private fun jumlahPesanan(nama: String, pesanan: String , kopiMantan: Int) {
             var total = pesanan.toInt() * kopiMantan
             binding.tvTotal.text = total.toString()
+            binding.tvNama.text = nama
     }
 
 }
